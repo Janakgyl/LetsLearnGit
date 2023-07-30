@@ -1,0 +1,62 @@
+git --version
+
+git config --global user.name ""
+git config --global user.email ""
+
+=> To check email id associated with git
+git config --global user.name
+ git config --global --edit
+
+
+=>
+mkdir <dir_name>
+cd dir_name
+git init
+
+ls -a ==> to know which files are tracked by git
+
+git status
+git add . ==> means now file come into staging area (Means that we hold the files before final commit)
+git commit -m "message"
+git log
+
+
+==> To go to a particular commit 
+git checkout  74e73aeb6d437bd8f77b2e8bc4a2c35e7729e81e
+
+==> to go back again
+git checkout master
+
+------------------------------------------------------------------------------------------------------
+
+git branch => (To see branches)
+git log
+
+==>making new branch
+git branch <branch_name>
+example: git branch dev
+
+==> To go inside dev branch
+git checkout dev
+
+git checkout -b <branch_name> (To create a new branch and directly going to checkout that)
+
+----------------------------------------------------------------------------------------------------------
+
+=> Merging branches
+
+git merge <branch_name>
+
+.gitignore for files we dont want to show on git ecosystem
+
+---------------------------------------------------------------------------------------------------------
+
+pushing code in github
+git remote -v (To check which repoistories are linked)
+
+First of all create a new repository on github
+then follow these steps
+
+git remote add origin https://github.com/Janakgyl/LetsLearnGit.git
+git branch -M main
+git push -u origin main
